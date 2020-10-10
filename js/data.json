@@ -1,0 +1,38 @@
+var movies = `[
+	{
+		"title" : "Valerian",
+		"image" : "./image/valerian(2017).jpg",
+		"logline" : "A dark force threatens Alpha, a vast metropolis and home to species from a thousand planets. Special operatives Valerian and Laureline must race to identify the marauding menace and safeguard not just Alpha, but the future of the universe.",
+		"likes" : 0
+	},
+	{
+		"title" : "Las Brujas de Zugarramurdi",
+		"image" : "./image/lasBrujasDeZugarramurdi(2013).jpg",
+		"logline" : "A gang of armed robbers finds a safe haven in a secluded village crammed with witches--only to encounter the bizarre, the unexpected, and the occult. Can they save themselves, and the rest of the world from the next witch apocalypse?",
+		"likes" : 0
+	},
+	{
+		"title" : "Inception",
+		"image" : "./image/inception(2010).jpg",
+		"logline" : "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+		"likes" : 0
+	},
+	{
+		"title" : "Aristocats",
+		"image" : "./image/aristocats(1970).jpg",
+		"logline" : "With the help of a smooth talking tomcat, a family of Parisian felines set to inherit a fortune from their owner try to make it back home after a jealous butler kidnaps them and leaves them in the country.",
+		"likes" : 0
+	},
+	{
+		"title" : "Grand Budapest Hotel",
+		"image" : "./image/grandBudapestHotel(2014).jpg",
+		"logline" : "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
+		"likes" : 0
+	},
+	{
+		"title" : "Eternal Sunshine Of A Spotless Mind",
+		"image" : "./image/eternalSunshineOfASpotlessMind(2004).jpg",
+		"logline" : "When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories.",
+		"likes" : 0
+	}
+]`

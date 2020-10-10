@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MovieFactory</title>
-	<link rel="stylesheet" href="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- for responsive features -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFactory</title>
+    <!-- linking fontawesome cdn -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <!-- linking bootstrap -->
+    <link rel="stylesheet" href="./style/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <!-- linking data -->
+    <script src="./js/data.json"></script>
+    <!-- linking jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-	
+	<!-- holds content -->
+    <div id="content">
+    	<!-- header element -->
+        <header>
+            <h1 class="text-center py-2 text-light m-0" style="background-color: black;">Movie Factory</h1>
+            <nav class="navbar navbar-light" style="background-color: #454545;">
+                <a class="navbar-brand text-light" href="#">Home</a>
+            </nav>
+        </header>
+
+        <!-- holds headline and movie cards -->
+        <main style="background-color: #1D2329;">
+        	<!-- headline -->
+        	<div class="row justify-content-end">
+        		<h4 class="col-4 text-light px-3 text-center">Movies</h4>
+        		<div class="col-4 text-right">
+        			<button id="sort" class="text-light mt-1" style="background-color: #1D2329; border:none;">Sort &#9660;</button>
+        		</div>
+            	
+        	</div>
+            <!-- holds the cards -->
+            <div id="cardContainer" class="row d-flex justify-content-around">
+            	
+            </div>
+        </main>
+
+        <footer class="py-4" style="background-color: black;">
+        	<h3 class="text-center py-2 text-light m-0" style="background-color: black;">Movie Factory</h3>
+        </footer>
+
+    </div>
+    <!-- linking js -->
+    <script src="./js/index.js"></script>
 </body>
 </html>
