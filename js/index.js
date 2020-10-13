@@ -29,15 +29,22 @@ for (let i = 0; i < movies_obj.length; i++) {
 $(document).ready(function(){
 	let likes_arr = [];
 
+    /*console.table(movies_obj);
+    console.log(movies_obj[0].likes)
+    movies_obj[0].likes++;
+    console.log(movies_obj[0].likes)*/
+
 	$("#content").delegate("button", "click", function(){
-		var index = $(this).siblings(".card-text").attr("index");
+		let index = $(this).siblings(".card-text").attr("index");
+/*        console.table(movies_obj);
+        console.log(movies_obj[index].likes);*/
 		movies_obj[index].likes++;
 		$(this).siblings(".card-text").html(movies_obj[index].likes);
 	});
 
 	$("#sort").on("click", function(){
 		for (let i = 0; i < movies_obj.length; i++) {
-			var likes = movies_obj[i].likes;
+			let likes = movies_obj[i].likes;
 			likes_arr[i] = [i, likes];
 		}
 
@@ -48,7 +55,7 @@ $(document).ready(function(){
 		$("#cardContainer").html("");
 
 		for (let i = 0; i < movies_obj.length; i++) {
-			var index = likes_arr[i][0];
+			let index = likes_arr[i][0];
 			$("#cardContainer").append(`
 				<div class="col-md-5 card mb-3 p-2 text-light" style="max-width: 540px; min-height: 300px; background-color: black;">
             		<div class="row no-gutters">
@@ -63,7 +70,7 @@ $(document).ready(function(){
                     			<div class="row ml-1">
                     				<span style="">Like</span>
                     				<button class="text-success mx-2 p-0" style="border: none; height: 0px; outline:none;"><span class="fas fa-thumbs-up text-success mx-2"></span></button>
-                    				<p id="numLikes" class="mx-2 card-text" index="${i}">${movies_obj[index].likes}</p>
+                    				<p id="numLikes" class="mx-2 card-text" index="${index}">${movies_obj[index].likes}</p>
                     			</div>
                     		</div>
                		 	</div>
