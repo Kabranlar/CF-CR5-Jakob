@@ -1,7 +1,8 @@
+// holds movie objects
 var movies_obj = JSON.parse(movies);
-
+// iterates through movies_obj and displays them
 for (let i = 0; i < movies_obj.length; i++) {
-
+	// each movie is being put in its own card
     $("#cardContainer").append(`
 		<div class="col-md-5 card mb-3 p-2 text-light" style="max-width: 540px; min-height: 300px; background-color: black;">
             <div class="row no-gutters">
@@ -26,27 +27,33 @@ for (let i = 0; i < movies_obj.length; i++) {
 };
 
 $(document).ready(function(){
+	//holds # of likes for each movie (used to sort movies)
 	let likes_arr = [];
-
+	// if the like btn on a movie is pressed, adds like to corresponding likecounter
 	$("#content").delegate("button", "click", function(){
+		// saves movie's index from movie_obj
 		let index = $(this).siblings(".card-text").attr("index");
+		//adds 1 like
 		movies_obj[index].likes++;
+		//displays new # of likes
 		$(this).siblings(".card-text").html(movies_obj[index].likes);
 	});
-
+	//when sort btn is pressed
 	$("#sort").on("click", function(){
+		//save # of likes and each movie's index
 		for (let i = 0; i < movies_obj.length; i++) {
 			let likes = movies_obj[i].likes;
 			likes_arr[i] = [i, likes];
 		}
-
+		//sort function to sort movies by # of likes (most to least)
 		likes_arr.sort(function(a, b){
 			return b[1] - a[1]
 		});
-
+		//clear movie cards
 		$("#cardContainer").html("");
-
+		//print movie cards in order
 		for (let i = 0; i < movies_obj.length; i++) {
+			//saves index of sorted array to display in sorted order (movies_obj doesn't change)
 			let index = likes_arr[i][0];
 			$("#cardContainer").append(`
 				<div class="col-md-5 card mb-3 p-2 text-light" style="max-width: 540px; min-height: 300px; background-color: black;">
@@ -71,5 +78,4 @@ $(document).ready(function(){
 			`);
 		}
 	})
-
 });
