@@ -1,5 +1,4 @@
 var movies_obj = JSON.parse(movies);
-/*console.table(movies_obj);*/
 
 for (let i = 0; i < movies_obj.length; i++) {
 
@@ -29,15 +28,8 @@ for (let i = 0; i < movies_obj.length; i++) {
 $(document).ready(function(){
 	let likes_arr = [];
 
-    /*console.table(movies_obj);
-    console.log(movies_obj[0].likes)
-    movies_obj[0].likes++;
-    console.log(movies_obj[0].likes)*/
-
 	$("#content").delegate("button", "click", function(){
 		let index = $(this).siblings(".card-text").attr("index");
-/*        console.table(movies_obj);
-        console.log(movies_obj[index].likes);*/
 		movies_obj[index].likes++;
 		$(this).siblings(".card-text").html(movies_obj[index].likes);
 	});
@@ -81,12 +73,3 @@ $(document).ready(function(){
 	})
 
 });
-
-
-
-
-/*$("button").on("click", function(){
-	var index = $(this).siblings(".card-text").attr("index");
-	movies_obj[index].likes += 1;
-	$(this).siblings(".card-text").html(movies_obj[index].likes);
-});*/
